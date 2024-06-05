@@ -20,16 +20,22 @@ public class UserRestController {
         datamap.put(user.getId(),user);
         return new ResponseEntity<>("User Saved", HttpStatus.CREATED);
     }
-    /*@GetMapping("/user")
+    /*
+    @GetMapping("/user")
     public User getUser(@RequestParam("userid") Integer userId){
         User user = datamap.get(userId);
         return user;
-    }*/
-    /*@GetMapping("/user")
+    }
+    */
+    /*
+
+    @GetMapping("/user")
     public User getUserData(@RequestParam("userid") Integer userId,@RequestParam("username") String name){
         User user = datamap.get(userId);
         return user;
-    }*/
+    }
+
+    */
 
 
     @GetMapping("/user/{id}/data")
