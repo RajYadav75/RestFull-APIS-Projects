@@ -14,7 +14,10 @@ public class UserRestController {
 
     private Map<Integer, User> datamap = new HashMap<>();
 
-    @PostMapping("/user")
+    @PostMapping(
+            value = "/user",
+            consumes = {"application/json"}
+    )
     public ResponseEntity<String> addUser(@RequestBody User user){
         System.out.println("User :: "+user);
         datamap.put(user.getId(),user);
@@ -38,7 +41,10 @@ public class UserRestController {
     */
 
 
-    @GetMapping("/user/{id}/data")
+    @GetMapping(
+            value = "/user/{id}/data",
+            produces ={"application/json"}
+    )
     public User getUser(@PathVariable("id") Integer userId){
         User user = datamap.get(userId);
         return user;
