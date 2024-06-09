@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Rest API</title>
+</head>
+<body>
+<h2>Book Ticket Here</h2>
+    <form th:action="@{/book-ticket}" th:object="${passenger}" method="post">
+        <table>
+            <tr>
+                <td>Name: </td>
+                <td><input type="text" th:field="*{name}"></td>
+            </tr>
+            <tr>
+                <td>from: </td>
+                <td><input type="text" th:field="*{from}"></td>
+            </tr>
+            <tr>
+                <td>to: </td>
+                <td><input type="text" th:field="*{to}"></td>
+            </tr>
+            <tr>
+                <td>DOJ: </td>
+                <td><input type="text" th:field="*{doj}"></td>
+            </tr>
+            <tr>
+                <td>Train Number: </td>
+                <td><input type="text" th:field="*{trainNumber}"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Submit"></td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>
