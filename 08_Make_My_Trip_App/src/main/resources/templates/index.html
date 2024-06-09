@@ -6,6 +6,7 @@
 </head>
 <body>
 <h2>Book Ticket Here</h2>
+<p th:text="${msg}"/>
     <form th:action="@{/book-ticket}" th:object="${passenger}" method="post">
         <table>
             <tr>
@@ -35,5 +36,7 @@
 
         </table>
     </form>
+    <hr/>
+    <a href="ticket">View Ticket</a>
 </body>
 </html>
